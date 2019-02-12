@@ -200,6 +200,11 @@ support.texastribune.org.
 """
 
 
+@app.route("/complete")
+def complete():
+    return render_template("foo.html")
+
+
 @app.route("/blast-vip")
 # @app.route("/blast-promo")
 def the_blastvip_form():

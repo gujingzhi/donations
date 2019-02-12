@@ -84,4 +84,23 @@
 {% for script in bundles['js'] %}
   <script src="{{ script }}"></script>
 {% endfor %}
+
+<script src="https://cdn.auth0.com/js/auth0/9.5.1/auth0.min.js"></script>
+<script>
+  const auth = new auth0.WebAuth({
+    domain: 'auth.texastribune.org',
+    clientID: 'Vn0ybEhggwAKFQ96HC04ynY5YM99_dQl',
+    redirectUri: 'http://local.texastribune.org/complete/',
+    responseType: 'id_token id code',
+    scope: 'openid profile email',
+  });
+  auth.checkSession(
+    {
+      responseType: 'id_token',
+    },
+    (err, authResult) => {
+      console.log(err, authResult);
+    }
+  );
+</script>
 {% endblock %}
