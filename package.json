@@ -5,7 +5,8 @@
     "js:dev": "NODE_ENV=development webpack --config ./webpack/config.dev.js",
     "dev": "python3 app.py & yarn run js:dev",
     "postinstall": "NODE_ENV=production webpack --config ./webpack/config.prod.js",
-    "lint": "eslint --ext .js,.vue static/js/src"
+    "lint": "eslint --ext .js,.vue static/js/src config",
+    "ds-tasks": "NODE_ENV=production node ./config/tasks/build.js"
   },
   "private": false,
   "repository": {
@@ -24,6 +25,7 @@
     "babel-plugin-transform-object-rest-spread": "^6.26.0",
     "babel-preset-env": "^1.6.1",
     "css-loader": "^0.28.11",
+    "ds-toolbox-test": "https://github.com/texastribune/ds-toolbox.git#dependencies",
     "es6-promise": "^4.2.4",
     "file-loader": "^1.1.11",
     "mini-css-extract-plugin": "^0.4.0",
@@ -52,6 +54,7 @@
     "eslint-config-prettier": "^3.3.0",
     "eslint-plugin-import": "^2.14.0",
     "eslint-plugin-vue": "^5.0.0",
+    "fast-glob": "^2.2.6",
     "vue-eslint-parser": "^4.0.2"
   },
   "license": "MIT",

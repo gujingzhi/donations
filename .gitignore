@@ -9,6 +9,7 @@ env-docker
 /static/prod/*.jpg
 /static/prod/*.json
 /static/prod/*.png
+/static/temp
 node_modules/
 *.DS_Store
 .cache
